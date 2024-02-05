@@ -14,17 +14,19 @@
         <div class="container">
             <nav>
                 <img src="public/logo.png" alt="Logo" class="logo">
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Projects</a></li>
-                    <li><a href="#">Contact</a></li>
+                <ul id="menu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#portfolio">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fas fa-times" onclick="closeMenu()"></i>
                 </ul>
+                <i class="fas fa-bars" onclick="openMenu()"></i>
             </nav>
 
             <div class="header-text">
-                <p>Computer Science Student</p>
-                <h1>Hi, I'm <span>Curtis Kokuloku</span><br>from Liberia, Africa</h1>
+                <p style="color: lightgray;">Computer Science Student</p>
+                <h1>Hi! I'm <span>Curtis Kokuloku</span><br>from Liberia, Africa</h1>
             </div>
         </div>
 
@@ -40,7 +42,7 @@
                 <div class="about-col-2">
                     <h1 class="subtitle">About Me</h1>
                     <p>
-                        I'm a computer science student at the University of Minnesota with proficiency in Python, Java, C/C++, and JavaScript. As a teaching assistant, I've honed communication skills and mentored peers. Eager to apply my academic knowledge professionally, I bring leadership and analytical thinking. Currently gaining hands-on experience with a university rocket team, contributing to telemetry systems. Passionate about innovative solutions, I bring creativity and a user-centric focus to contribute to groundbreaking digital products on your team.
+                        I'm a computer science student at the University of Minnesota with proficiency in Java, C/C++, Python, HTML/CSS, JavaScript, SQL, and TypeScript. As a teaching assistant, I've honed communication skills and mentored peers. Eager to apply my academic knowledge professionally, I bring leadership and analytical thinking. Currently gaining hands-on experience with a university rocket team, contributing to telemetry systems. Passionate about innovative solutions, I bring creativity and a user-centric focus to contribute to groundbreaking digital products on your team.
                     </p>
 
                     <div class="tab-titles">
@@ -52,9 +54,9 @@
                     <!-- Skills -->
                     <div class="tab-contents active-tab" id="skills">
                         <ul>
-                            <li><span>Programming Languages</span> <i class="fa-solid fa-code"></i><br>Java, C/C++, Python, HTML/CSS, JavaScript, SQL, TypeScript, WordPress</li>
-                            <li><span>Frameworks</span> <i class="fa-brands fa-quinscape"></i><br>Node.js, React, NumPy, Angular, Django, JUnit</li>
-                            <li><span>Tools</span> <i class="fa-solid fa-toolbox"></i><br>Git/GitHub, MacOS, Unix/LinuxWindows, MySQL, PostgreSQL, VS Code</li>
+                            <li><span>Programming Languages</span><br>Java, C/C++, Python, HTML/CSS, JavaScript, SQL, TypeScript, WordPress</li>
+                            <li><span>Frameworks</span><br>Node.js, React, NumPy, Angular, Django, JUnit</li>
+                            <li><span>Tools</span><br>Git/GitHub, MacOS, Unix/Linux, Windows, MySQL, PostgreSQL, VS Code</li>
                         </ul>
                     </div>
 
@@ -82,29 +84,87 @@
     <!-- Portfolio -->
     <div id="portfolio">
         <div class="container">
-            <h1 class="subtitle">My Work</h1>
+            <h1 class="subtitle">Projects</h1>
             <div class="work-list">
+                <!-- Snake Game -->
                 <div class="work">
-                    <img src="public/rocket-team.jpeg" alt="Rocket Team - Avionics">
+                    <img src="public/snake.jpeg" alt="Snake Game">
                     <div class="layer">
-                        <h3>Title</h3>
-                        <p>Description</p>
-                        <a href="#"><i class="fa-solid fa-link"></i></a>
+                        <h3>Snake Game</h3>
+                        <p>Classic snake game recreated in Python using the Turtle graphics library. Demonstrates proficiency in object-oriented programming, game development, and user interface design. Blend of nostalgia and modern techniques for an engaging and educational gaming experience.</p>
+                        <a href="https://github.com/curtiskokuloku/Snake-Game.git" target="_blank"><i class="fa-solid fa-link"></i></a>
                     </div>
                 </div>
+
+                <!-- Tetris -->
                 <div class="work">
-                    <img src="public/teaching.png" alt="Teaching Assistant">
+                    <img src="public/tetris.jpeg" alt="Tetris">
+                    <div class="layer">
+                        <h3>Tetris</h3>
+                        <p>Classic Tetris game created in Python using the Turtle graphics library. Aims to deliver a fun and interactive gaming experience. Demonstrates expertise in Python programming and graphical user interface design.</p>
+                        <a href="https://github.com/curtiskokuloku/Tetris.git" target="_blank"><i class="fa-solid fa-link"></i></a>
+                    </div>
                 </div>
+
+                <!-- Terminal Chess Master -->
                 <div class="work">
-                    <img src="public/research-assistant.jpeg" alt="Research Assistant">
+                    <img src="public/chess.webp" alt="Chess">
+                    <div class="layer">
+                        <h3>Terminal Chess Master</h3>
+                        <p>C++ program enabling chess play in the terminal. Designed for simplicity and engagement, catering to players of all levels. Highlights object-oriented programming principles for a structured and modular chess environment.</p>
+                        <a href="https://github.com/curtiskokuloku/Chess.git" target="_blank"><i class="fa-solid fa-link"></i></a>
+                    </div>
                 </div>
+
+                <!-- Maze Solver -->
                 <div class="work">
-                    <img src="public/embedded-sys.jpeg" alt="Small Satellite Research Lab">
+                    <img src="public/maze.png" alt="Maze Solver">
+                    <div class="layer">
+                        <h3>Maze Solver</h3>
+                        <p>C++ application generating and solving mazes. A unique educational tool emphasizing maze algorithms, object-oriented programming, and key C++ concepts. Experience maze solving with elegance in C++.</p>
+                        <a href="https://github.com/curtiskokuloku/Maze.git" target="_blank"><i class="fa-solid fa-link"></i></a>
+                    </div>
                 </div>
             </div>
+            <a href="https://github.com/curtiskokuloku?tab=repositories" target="_blank" class="btn">See more</a>
         </div>
     </div>
 
+    <!-- Contact -->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="subtitle">Contact Me</h1>
+                    <p><i class="fa-regular fa-envelope"></i> c.kokuloku01@yahoo.com</p>
+                    <p><i class="fa-solid fa-phone"></i> 612-513-1815</p>
+                    <div class="social-icons">
+                        <a href="https://www.linkedin.com/in/curtis-kokuloku/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://github.com/curtiskokuloku" target="_blank"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://www.instagram.com/_curtisk_" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                    <a href="public/resume.pdf" target="_blank" class="btn btn-2" download="">Download CV</a>
+                </div>
+
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="Email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn-2">Submit</button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="copyright">
+            <p>Copyright © Curtis 2024. Made with <i class="fas fa-heart"></i>. All rights reserved.</p>
+        </div>
+    </div>
+
+
+    <!-- Script -->
     <script>
         var tabLinks = document.getElementsByClassName('tab-links');
         var tabContents = document.getElementsByClassName('tab-contents');
@@ -118,8 +178,38 @@
             }
             event.currentTarget.classList.add('active-link');
             document.getElementById(tabName).classList.add('active-tab');
-
         }
+    </script>
+
+    <script>
+        var sideMenu = document.getElementById('menu');
+
+        function openMenu() {
+            sideMenu.style.right = "0";
+        }
+
+        function closeMenu() {
+            sideMenu.style.right = "-200px";
+        }
+    </script>
+
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbx80iZpZD62lJDIzkP90su7TYcozBuH7S2HZSgdZEOsw5VaZdvQ9J7nfW69uSLl2hOd/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg = document.getElementById('msg')
+
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+                msg.innerHTML = "Message sent successfully!"
+                setTimeout(function() {
+                    msg.innerHTML = ""
+                }, 3000)
+                form.reset()
+            })
+            .catch(error => console.error('Error!', error.message))
+        })
     </script>
 
 </body>

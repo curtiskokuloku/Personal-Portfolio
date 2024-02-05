@@ -5,9 +5,13 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background: black;
-    color: rgba(0, 0, 0, 0.528);
+    color: white;
 }
 
 #header {
@@ -16,7 +20,6 @@ body {
     background-image: url(public/background.png);
     background-position: center;
     background-size: cover;
-    background-position-y: top;
 }
 .container {
     padding: 10px 10%;
@@ -40,7 +43,7 @@ nav ul li {
 }
 
 nav ul li a {
-    color: rgba(0, 0, 0, 0.528);
+    color: white;
     text-decoration: none;
     font-size: 18px;
     position: relative;
@@ -50,7 +53,7 @@ nav ul li a::after {
     content: '';
     width: 0;
     height: 3px;
-    background: rgb(0, 0, 0);
+    background: cadetblue;
     position: absolute;
     left: 0;
     bottom: -6px;
@@ -73,12 +76,17 @@ nav ul li a:hover::after {
 
 .header-text h1 span{
     color: cadetblue;
+    text-shadow: 2px 2px black;
+}
+
+.header-text p {
+    text-shadow: 2px 2px black;
 }
 
 /* About */
 #about {
     padding: 80px 0px;
-    color: grey;
+    color: white;
 }
 
 .row {
@@ -98,17 +106,22 @@ nav ul li a:hover::after {
 
 .about-col-2 {
     flex-basis: 60%;
+    color: grey;
 }
 
 .subtitle {
     font-size: 60px;
     font-weight: 600;
-    color: white;
+    color: rgba(255, 255, 255, 0.879);
 }
 
 .tab-titles {
     display: flex;
     margin: 20px 0 40px;
+}
+
+.tab-titles p {
+    color: rgba(255, 255, 255, 0.879);
 }
 
 .tab-links {
@@ -140,7 +153,7 @@ nav ul li a:hover::after {
 }
 
 .tab-contents ul li span{
-    color: rgb(86, 153, 156);
+    color: cadetblue;
     font-size: 14px;;
 }
 
@@ -174,12 +187,233 @@ nav ul li a:hover::after {
     width: 100%;
     border-radius:  10px;
     display: block;
+    transition: transform 0.5s;
 }
 
 .layer h3 {
-    color: white;
+    color: cadetblue;
+    font-weight: 500;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px rgb(63, 64, 64);
 }
 
 .layer {
+    color: white;
+    width: 100%;
+    height: 0;
+    background: linear-gradient(rgb(0, 0, 0, 0.6), skyblue);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 5px;
+    text-align: center;
+    font-size: 14px;
+    transition: height 0.5s;
+}
+
+.layer a {
+    margin-top: 15px;
+    color: cadetblue;
+    text-decoration: none;
+    font-size: 12px;
+    line-height: 25px;
+    background: black;
+    width: 25px;
+    height: 25px;
+    border-radius: 70%;
+}
+
+.work:hover img {
+    transform: scale(1.1);
+}
+
+.work:hover .layer{
+    height: 100%;
+}
+
+.btn {
+    display: block;
+    margin: 50px auto;
+    width: fit-content;
+    border: 1px solid cadetblue;
+    padding: 14px 50px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: white;
+    transition: background- 0.5s;
+}
+
+.btn:hover {
+    background: cadetblue;
+}
+
+/* Contact & Form */
+.contact-left p {
     color: grey;
+    margin-top: 30px;
+}
+
+.contact-left {
+    flex-basis: 35%;
+}
+
+.contact-right {
+    flex-basis: 60%;
+}
+
+.contact-left p i {
+    color: cadetblue;
+    margin-right: 15px;
+    font-size: 25px;
+}
+
+.social-icons {
+    margin-top: 30px;
+}
+
+.social-icons a {
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 15px;
+    color: grey;
+    display: inline-block;
+    transition: transform 0.5s;
+}
+
+.social-icons a:hover {
+    color: cadetblue;
+    transform: translateY(-5px);
+}
+
+.btn.btn-2 {
+    display: inline-block;
+    transition: background- 0.5s;
+}
+
+.btn.btn-2:hover {
+    background: cadetblue;
+}
+
+.contact-right form {
+    width: 100%;
+}
+
+form input, form textarea {
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: white;
+    padding: 15px;
+    margin: 15px 0;
+    color: black;
+    font-size: 18px;
+    border-radius: 6px;
+}
+
+form .btn-2 {
+    padding: 14px 60px;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+    color: black;
+}
+
+.copyright {
+    width: 100%;
+    text-align: center;
+    padding: 15px;
+    background: cadetblue;
+    font-weight: 300;
+    margin-top: 20px;
+}
+
+.copyright i {
+    color: beige;
+}
+
+/* Small Screens */
+nav .fas {
+    display: none;
+}
+
+@media only screen and (max-width: 600px) {
+    #header {
+        background-image: url(public/background-smaller.png);
+    }
+    .header-text {
+        margin-top: 100%;
+        font-size: 16px;
+    }
+    .header-text h1 {
+        font-size: 30px;
+    }
+    nav .fas {
+        display: block;
+        font-size: 25px;
+    }
+
+    nav ul {
+        background: cadetblue;
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+        transition: right 0.5s;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 25px;
+    }
+
+    nav ul .fas {
+        position: absolute;
+        cursor: pointer;
+        top: 25px;
+        left: 25px;
+    }
+
+    .subtitle {
+        font-size: 40px;
+    }
+
+    .about-col-1, .about-col-2 {
+        flex-basis: 100%;
+    }
+
+    .about-col-1 {
+        margin-bottom: 30px;
+    }
+
+    .about-col-2 {
+        font-size: 14px;
+    }
+
+    .tab-links {
+        font-size: 16px;
+        margin-right: 20px;
+    }
+
+    .contact-left, .contact-right {
+        flex-basis: 100%;
+    }
+
+    .copyright {
+        font-size: 14px;
+    }
+}
+
+#msg {
+    color: #61b752;
+    margin-top: -40px;
+    display: block
 }

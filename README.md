@@ -1,5 +1,7 @@
 # Curtis Kokuloku's Personal Portfolio
 
+<img src="public/website-demo 2.gif">
+
 ## Description
 
 This project is a personal portfolio website showcasing my skills, projects, experiences, and contact information. The goal is to provide a centralized place for people to learn more about me and explore examples of my work.

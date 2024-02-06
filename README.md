@@ -1,6 +1,6 @@
 # Curtis Kokuloku's Personal Portfolio
 
-<img src="public/website-demo 2.gif">
+<img src="public/website-demo 2.gif" width="1500">
 
 ## Description
 
